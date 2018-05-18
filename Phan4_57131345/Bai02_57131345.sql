@@ -69,7 +69,7 @@ BEGIN
 END
 ---
 GO
-CREATE PROC Sach_Sưa
+CREATE PROC Sach_Sua
 @MaSach VARCHAR(10) ,
 @TenSach NVARCHAR(50) ,
 @AnhSach VARCHAR(50) ,

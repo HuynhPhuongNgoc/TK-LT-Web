@@ -17,12 +17,16 @@ public partial class Bai2_57131345 : System.Web.UI.Page
         adap.Fill(ds);
         return ds;
     }
+    //void HienThiGridView
     protected void Page_Load(object sender, EventArgs e)
     {
-        d1.DataSource = LoaiSachDS();
-        d1.DataTextField = "TenLS";
-        d1.DataValueField = "MaLS";
-        d1.DataBind();
+        if (!IsPostBack)
+        {
+            d1.DataSource = LoaiSachDS();
+            d1.DataTextField = "TenLS";
+            d1.DataValueField = "MaLS";
+            d1.DataBind();
+        }
         g1.DataSource = SachDS();
         g1.DataBind();
     }
@@ -76,7 +80,7 @@ public partial class Bai2_57131345 : System.Web.UI.Page
         cmd.ExecuteNonQuery();
         con.Close();
     }
-    //--------------------
+    //--------------------kkk
     protected void btnThem_Click(object sender, EventArgs e)
     {
         try
@@ -96,9 +100,9 @@ public partial class Bai2_57131345 : System.Web.UI.Page
     {
         try
         {
-            SuaSach(txtms.Text, txtts.Text, f1.FileName, txttg.Text, txtnxb.Text, d1.SelectedValue);
-            g1.DataSource = SachDS();
-            g1.DataBind();
+                SuaSach(txtms.Text, txtts.Text, f1.FileName, txttg.Text, txtnxb.Text, d1.SelectedValue);
+                g1.DataSource = SachDS();
+                g1.DataBind();
             lbltb.Text = "Sửa thành công";
         }
         catch
@@ -112,5 +116,18 @@ public partial class Bai2_57131345 : System.Web.UI.Page
         XoaSach(txtms.Text);
         g1.DataSource = SachDS();
         g1.DataBind();
+    }
+
+
+    protected void g1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+    {
+        GridViewRow row;
+        row = g1.Rows[e.NewSelectedIndex];
+        txtms.Text = Server.HtmlDecode(row.Cells[1].Text);
+        txtts.Text = Server.HtmlDecode(row.Cells[2].Text);
+        //txtMaSach.Text = Server.HtmlDecode(row.Cells[3].Text);
+        txttg.Text = Server.HtmlDecode(row.Cells[4].Text);
+        txtnxb.Text = Server.HtmlDecode(row.Cells[5].Text);
+        d1.SelectedValue = Server.HtmlDecode(row.Cells[6].Text);
     }
 }

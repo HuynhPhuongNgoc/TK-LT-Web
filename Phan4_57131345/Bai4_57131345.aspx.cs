@@ -20,13 +20,18 @@ public partial class Bai4_57131345 : System.Web.UI.Page
    
     protected void Page_Load(object sender, EventArgs e)
     {
-        d1.DataSource = LoaiTTDS();
-        d1.DataTextField = "TenLTT";
-        d1.DataValueField = "MaLTT";
-        d1.DataBind();
-        g1.DataSource = TinTucDS();
-        g1.DataBind();
-    }
+        if (!IsPostBack)
+        {
+            d1.DataSource = LoaiTTDS();
+            d1.DataTextField = "TenLTT";
+            d1.DataValueField = "MaLTT";
+            d1.DataBind();
+        }
+            
+            g1.DataSource = TinTucDS();
+            g1.DataBind();
+        }
+    
     DataTable TinTucDS()
     {
         SqlDataAdapter adap = new SqlDataAdapter("TinTuc_DS", conn);
@@ -35,7 +40,7 @@ public partial class Bai4_57131345 : System.Web.UI.Page
         return ds;
     }
     //---------------------------
-    void ThemTT(string matt, string tieude, string ngaydang, string anhmh, string maltt)
+    void ThemTT(string matt, string tieude, DateTime ngaydang, string anhmh, string maltt)
     {
         SqlConnection con = new SqlConnection(conn);
         con.Open();
@@ -44,13 +49,13 @@ public partial class Bai4_57131345 : System.Web.UI.Page
         cmd.Parameters.Add("@MaTT", SqlDbType.VarChar).Value = matt;
         cmd.Parameters.Add("@TieuDe", SqlDbType.NVarChar).Value = tieude;
         cmd.Parameters.Add("@NgayDang", SqlDbType.DateTime).Value = ngaydang;
-        cmd.Parameters.Add("@AnhMH", SqlDbType.VarChar).Value = anhmh;
+        cmd.Parameters.Add("@AnhMH", SqlDbType.NVarChar).Value = anhmh;
         cmd.Parameters.Add("@MaLTT", SqlDbType.VarChar).Value = maltt;
        
         cmd.ExecuteNonQuery();
         con.Close();
     }
-    void SuaTT(string matt, string tieude, string ngaydang, string anhmh, string maltt)
+    void SuaTT(string matt, string tieude, DateTime ngaydang, string anhmh, string maltt)
     {
         SqlConnection con = new SqlConnection(conn);
         con.Open();
@@ -59,7 +64,7 @@ public partial class Bai4_57131345 : System.Web.UI.Page
         cmd.Parameters.Add("@MaTT", SqlDbType.VarChar).Value = matt;
         cmd.Parameters.Add("@TieuDe", SqlDbType.NVarChar).Value = tieude;
         cmd.Parameters.Add("@NgayDang", SqlDbType.DateTime).Value = ngaydang;
-        cmd.Parameters.Add("@AnhMH", SqlDbType.VarChar).Value = anhmh;
+        cmd.Parameters.Add("@AnhMH", SqlDbType.NVarChar).Value = anhmh;
         cmd.Parameters.Add("@MaLTT", SqlDbType.VarChar).Value = maltt;
         cmd.ExecuteNonQuery();
         con.Close();
@@ -81,7 +86,7 @@ public partial class Bai4_57131345 : System.Web.UI.Page
     {
         try
         {
-            ThemTT(txtmtt.Text, txttd.Text, txtnd.Text, f1.FileName, d1.SelectedValue);
+            ThemTT(txtmtt.Text, txttd.Text, Convert.ToDateTime(txtnd.Text), f1.FileName, d1.SelectedValue);
             g1.DataSource = TinTucDS();
             g1.DataBind();
             lbltb.Text = "Thêm vào thành công";
@@ -97,7 +102,7 @@ public partial class Bai4_57131345 : System.Web.UI.Page
         {
             try
             {
-                SuaTT(txtmtt.Text, txttd.Text, txtnd.Text, f1.FileName, d1.SelectedValue);
+                SuaTT(txtmtt.Text, txttd.Text, Convert.ToDateTime(txtnd.Text), f1.FileName, d1.SelectedValue);
                 g1.DataSource = TinTucDS();
                 g1.DataBind();
                 lbltb.Text = "Sửa thành công";
@@ -114,5 +119,24 @@ public partial class Bai4_57131345 : System.Web.UI.Page
         XoaTT(txtmtt.Text);
         g1.DataSource = TinTucDS();
         g1.DataBind();
+    }
+
+    protected void g1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+    {
+        GridViewRow row;
+        row = g1.Rows[e.NewSelectedIndex];
+        txtmtt.Text = Server.HtmlDecode(row.Cells[1].Text);
+        txttd.Text = Server.HtmlDecode(row.Cells[2].Text);
+        txtnd.Text = Server.HtmlDecode(row.Cells[3].Text);
+        //txtnd.Text = Server.HtmlDecode(row.Cells[3].Text);
+        //txtdg.Text = Server.HtmlDecode(row.Cells[5].Text);
+        d1.SelectedValue = Server.HtmlDecode(row.Cells[5].Text);
+    }
+
+    protected void g1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+    {
+       g1.PageIndex = e.NewPageIndex;
+        g1.DataBind();
+        //hienThiGridView();
     }
 }

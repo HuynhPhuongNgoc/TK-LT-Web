@@ -7,7 +7,7 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            height: 389px;
+            height: 562px;
         }
         .auto-style2 {
             height: 26px;
@@ -20,11 +20,11 @@
             width: 326px;
         }
         .auto-style5 {
-            width: 155px;
+            width: 167px;
         }
         .auto-style6 {
             height: 26px;
-            width: 155px;
+            width: 167px;
         }
         .auto-style7 {
             margin-right: 67px;
@@ -37,7 +37,7 @@
             width: 112px;
         }
         .auto-style10 {
-            width: 155px;
+            width: 167px;
             height: 84px;
         }
         .auto-style11 {
@@ -53,7 +53,10 @@
         }
         .auto-style14 {
             width: 100%;
-            height: 132px;
+            height: 174px;
+        }
+        .auto-style15 {
+            margin-left: 1px;
         }
     </style>
 </head>
@@ -64,7 +67,8 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label1" runat="server" Text="THÔNG TIN TIN TỨC "></asp:Label>
         <br />
-        <table class="auto-style14">
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<table class="auto-style14">
             <tr>
                 <td class="auto-style10">Mã tin tức</td>
                 <td class="auto-style11">
@@ -88,8 +92,9 @@
             <tr>
                 <td class="auto-style6">Loại tin tức</td>
                 <td class="auto-style4">
-                    <asp:DropDownList ID="d1" runat="server" Height="16px" Width="250px">
+                    <asp:DropDownList ID="d1" runat="server" Height="30px" Width="251px" CssClass="auto-style15">
                     </asp:DropDownList>
+                    <br />
                 </td>
                 <td class="auto-style9">
                     <asp:Button ID="btnThem" runat="server" Text="Thêm" OnClick="btnThem_Click1" Width="88px" />
@@ -102,16 +107,20 @@
             </tr>
         </table>
     
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <br />
         <asp:Label ID="Label2" runat="server" Text="DANH SÁCH TIN TỨC HIỆN CÓ"></asp:Label>
         <br />
-        <asp:GridView ID="g1" runat="server" Width="484px">
+        <asp:GridView ID="g1" runat="server" Width="484px" AllowPaging="True" AutoGenerateSelectButton="True" OnSelectedIndexChanging="g1_SelectedIndexChanging" OnPageIndexChanging="g1_PageIndexChanging" PageSize="3">
         </asp:GridView>
         <br />
         <asp:Label ID="lbltb" runat="server"></asp:Label>
         <br />
     
     </div>
+        <p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

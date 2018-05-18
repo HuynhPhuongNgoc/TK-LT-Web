@@ -19,10 +19,13 @@ public partial class Bai3_57131345 : System.Web.UI.Page
     }
     protected void Page_Load(object sender, EventArgs e)
     {
-        d1.DataSource = LoaiDTDS();
-        d1.DataTextField = "TenLDT";
-        d1.DataValueField = "MaLDT";
-        d1.DataBind();
+        if (!IsPostBack)
+        {
+            d1.DataSource = LoaiDTDS();
+            d1.DataTextField = "TenLDT";
+            d1.DataValueField = "MaLDT";
+            d1.DataBind();
+        }
         g1.DataSource = DienThoaiDS();
         g1.DataBind();
     }
@@ -104,7 +107,7 @@ public partial class Bai3_57131345 : System.Web.UI.Page
     {
         try
         {
-            SuaDT(txtmdt.Text, txttdt.Text,f1.FileName, txtdg.Text, txtpkkt.Text, d1.SelectedValue);
+            SuaDT(txtmdt.Text, txttdt.Text,f1.FileName, txtpkkt.Text, txtdg.Text,  d1.SelectedValue);
             g1.DataSource = DienThoaiDS();
             g1.DataBind();
             lbltb.Text = "Sửa thành công";
@@ -113,5 +116,17 @@ public partial class Bai3_57131345 : System.Web.UI.Page
         {
             lbltb.Text = "Thông tin không hợp lệ, vui lòng kiểm tra lại";
         }
+    }
+
+    protected void g1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+    {
+        GridViewRow row;
+        row = g1.Rows[e.NewSelectedIndex];
+        txtmdt.Text = Server.HtmlDecode(row.Cells[1].Text);
+        txttdt.Text = Server.HtmlDecode(row.Cells[2].Text);
+        //txtMaSach.Text = Server.HtmlDecode(row.Cells[3].Text);
+        txtpkkt.Text = Server.HtmlDecode(row.Cells[4].Text);
+        txtdg.Text = Server.HtmlDecode(row.Cells[5].Text);
+        d1.SelectedValue = Server.HtmlDecode(row.Cells[6].Text);
     }
 }
