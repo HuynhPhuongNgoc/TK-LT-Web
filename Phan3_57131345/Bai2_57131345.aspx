@@ -5,10 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            height: 169px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="height: 97px">
+    <div class="auto-style1">
     
         <asp:Label ID="Label1" runat="server" Text="Giải và biện luận phương trình bậc 1 (ax+b=0)"></asp:Label>
         <br />
@@ -21,6 +26,7 @@
         <asp:Button ID="btnGiai" runat="server" Height="25px" OnClick="btnGiai_Click" style="margin-left: 112px; margin-top: 0px" Text="Giải" Width="96px" />
 &nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnLamLai" runat="server" OnClick="btnLamLai_Click" Text="Làm lại" Width="109px" />
+        <br />
         <br />
         <asp:Label ID="Label4" runat="server" Text="Kết quả:"></asp:Label>
 &nbsp;&nbsp;

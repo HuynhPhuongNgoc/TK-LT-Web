@@ -18,11 +18,13 @@ public partial class Bai8_57131345 : System.Web.UI.Page
         if (!IsValid)
             return;
         else
-           txtHienThi.Text = "Họ tên khách hàng: " + txtht.Text + "<br>" +
+           lblthongtin.Text = "Họ tên khách hàng: " + txtht.Text + "<br>" +
                           "Mật khẩu: " + txtmk.Text + "<br>" +
                           "Thu nhập (triệu đồng): " + txttn.Text;
     }
-    protected void KiemTraSo_ServerValidate(object source, ServerValidateEventArgs args)
+   
+
+    protected void KiemTraSo_ServerValidate1(object source, ServerValidateEventArgs args)
     {
         int so;
         try
@@ -35,7 +37,7 @@ public partial class Bai8_57131345 : System.Web.UI.Page
         }
         catch
         {
-            txtHienThi.Text = "Dữ liệu không là kiểu số. Vui lòng kiểm tra lại!";
+            lblloi.Text = "Dữ liệu không là kiểu số. Vui lòng kiểm tra lại!";
         }
     }
 }

@@ -15,14 +15,12 @@
         (ax2+bx+c=0)<br />
         <br />
         <asp:TextBox ID="txtA" runat="server" Width="79px"></asp:TextBox>
-&nbsp;<asp:Label ID="Label2" runat="server" Text="x2  +"></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text="x2  +"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="txtB" runat="server" Height="16px" Width="86px"></asp:TextBox>
-&nbsp;&nbsp;
-        <asp:Label ID="Label3" runat="server" Text="x +  "></asp:Label>
+&nbsp;<asp:Label ID="Label3" runat="server" Text="x +  "></asp:Label>
 &nbsp;
         <asp:TextBox ID="txtC" runat="server" Width="83px"></asp:TextBox>
-&nbsp;
         <asp:Label ID="Label4" runat="server" Text="= 0"></asp:Label>
         <br />
         <br />

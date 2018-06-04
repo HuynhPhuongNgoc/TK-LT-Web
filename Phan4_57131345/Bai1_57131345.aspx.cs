@@ -100,5 +100,6 @@ public partial class Bai1_57131345 : System.Web.UI.Page
         XoaDT(txtmdt.Text);
         g1.DataSource = DienThoaiDS();
         g1.DataBind();
+        lbltb.Text = "Xóa thành công";
     }
 }

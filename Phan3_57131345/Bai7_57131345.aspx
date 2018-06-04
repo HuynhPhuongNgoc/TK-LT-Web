@@ -117,9 +117,9 @@
                 <td class="auto-style7">
                     <asp:Label ID="Label7" runat="server" Text="Giới tính : "></asp:Label>
 &nbsp;&nbsp;&nbsp;
-                    <asp:RadioButton ID="rbtnnam" runat="server" Text="Nam" />
+                    <asp:RadioButton ID="rbtnnam" runat="server" Text="Nam" GroupName="A" />
 &nbsp;&nbsp;
-                    <asp:RadioButton ID="rbtnnu" runat="server" Text="Nữ" />
+                    <asp:RadioButton ID="rbtnnu" runat="server" Text="Nữ" GroupName="A" />
                 </td>
                 <td class="auto-style20"></td>
             </tr>
@@ -161,8 +161,6 @@
         <br />
         <br />
         <asp:Image ID="Image1" runat="server" CssClass="auto-style21" Height="72px" Width="117px" ImageUrl="~/hinh-anh-pikachu-de-thuong-kute-nhat-1.jpg" />
-        <p>
-            &nbsp;</p>
         <p>
             <asp:TextBox ID="txtHThi" runat="server" ForeColor="Red" Height="90px" OnTextChanged="TextBox1_TextChanged" TextMode="MultiLine" Width="400px"></asp:TextBox>
         </p>

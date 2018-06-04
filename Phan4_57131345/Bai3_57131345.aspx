@@ -23,6 +23,13 @@
             width: 100%;
             height: 172px;
         }
+        .auto-style6 {
+            width: 142px;
+            height: 27px;
+        }
+        .auto-style7 {
+            height: 27px;
+        }
     </style>
 </head>
 <body>
@@ -47,11 +54,11 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style3">Tên điện thoại</td>
-                <td>
+                <td class="auto-style6">Tên điện thoại</td>
+                <td class="auto-style7">
                     <asp:TextBox ID="txttdt" runat="server" Width="336px"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style7"></td>
             </tr>
             <tr>
                 <td class="auto-style3">Ảnh điện thoại</td>
@@ -61,11 +68,11 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style3">Phụ kiện kèm theo</td>
-                <td>
+                <td class="auto-style6">Phụ kiện kèm theo</td>
+                <td class="auto-style7">
                     <asp:TextBox ID="txtpkkt" runat="server" Width="336px"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style7"></td>
             </tr>
             <tr>
                 <td class="auto-style4">Đơn giá</td>
@@ -85,6 +92,8 @@
                     <asp:Button ID="btnXoa" runat="server" Text="Xóa" Width="74px" OnClick="btnXoa_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btnSua" runat="server" Text="Sửa" Width="80px" OnClick="btnSua_Click" />
+                    <br />
+                    <br />
                 </td>
                 <td class="auto-style2"></td>
             </tr>

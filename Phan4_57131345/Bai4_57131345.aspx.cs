@@ -6,11 +6,16 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
 
 public partial class Bai4_57131345 : System.Web.UI.Page
 {
     String conn = "Data Source=(local);Initial Catalog=Bai4_57131345;user=sa;pwd=sa";
-    DataTable LoaiTTDS()
+    string TenFile = "";
+    string DuongDan = "";
+        
+
+DataTable LoaiTTDS()
     {
         SqlDataAdapter adap = new SqlDataAdapter("LoaiTT_DS", conn);
         DataTable ds = new DataTable();
@@ -87,6 +92,12 @@ public partial class Bai4_57131345 : System.Web.UI.Page
         try
         {
             ThemTT(txtmtt.Text, txttd.Text, Convert.ToDateTime(txtnd.Text), f1.FileName, d1.SelectedValue);
+            if (f1.HasFile)
+            {
+                TenFile = f1.FileName;
+                DuongDan = Server.MapPath("~/Images/");
+                f1.SaveAs(DuongDan + TenFile);
+            }
             g1.DataSource = TinTucDS();
             g1.DataBind();
             lbltb.Text = "Thêm vào thành công";
@@ -106,6 +117,18 @@ public partial class Bai4_57131345 : System.Web.UI.Page
                 g1.DataSource = TinTucDS();
                 g1.DataBind();
                 lbltb.Text = "Sửa thành công";
+                // xOA File hien tai
+                DuongDan = Server.MapPath("~/Images/");
+                DuongDan = DuongDan + LayTenFile(txtmtt.Text);
+                if (File.Exists(DuongDan) == true)
+                    File.Delete(DuongDan);
+                // Them file moi vao
+                if (f1.HasFile)
+                {
+                    TenFile = f1.FileName;
+                    DuongDan = Server.MapPath("~/Images/");
+                    f1.SaveAs(DuongDan + TenFile);
+                }
             }
             catch
             {
@@ -117,8 +140,13 @@ public partial class Bai4_57131345 : System.Web.UI.Page
     protected void btnXoa_Click1(object sender, EventArgs e)
     {
         XoaTT(txtmtt.Text);
+        DuongDan = Server.MapPath("~/Images/");
+        DuongDan = DuongDan + LayTenFile(txtmtt.Text);
+        if (File.Exists(DuongDan) == true)
+            File.Delete(DuongDan);
         g1.DataSource = TinTucDS();
         g1.DataBind();
+        lbltb.Text = "Xóa thành công";
     }
 
     protected void g1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
@@ -138,5 +166,17 @@ public partial class Bai4_57131345 : System.Web.UI.Page
        g1.PageIndex = e.NewPageIndex;
         g1.DataBind();
         //hienThiGridView();
+    }
+
+    private string LayTenFile(String ma)
+    {
+        for (int i = 0; i < g1.Rows.Count; i++)
+        {
+            if (ma.Equals(g1.Rows[i].Cells[1].Text))
+            {
+                return g1.Rows[i].Cells[4].Text;
+            }
+        }
+        return "";
     }
 }

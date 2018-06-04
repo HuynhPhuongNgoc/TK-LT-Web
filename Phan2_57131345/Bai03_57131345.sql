@@ -1,11 +1,14 @@
-﻿CREATE DATABASE QLBH
+﻿GO 
+CREATE DATABASE QLBH
+GO 
 USE QLBH
 --bp-nv--kh--ncc--lmh--mh--hdb--hdn
-
+GO 
 CREATE TABLE BoPhan(
 MaBP NCHAR(2) PRIMARY KEY NOT NULL,
 TenBP NVARCHAR(30) NOT NULL
 )
+GO 
 CREATE TABLE NhanVien(
 MaNV VARCHAR(10) PRIMARY KEY NOT NULL,
 HoNV NVARCHAR(10) NOT NULL,
@@ -16,7 +19,7 @@ DiaChi NVARCHAR(50) NOT NULL,
 Luong TINYINT NOT NULL,
 MaBP NCHAR(2) NOT NULL FOREIGN KEY REFERENCES dbo.BoPhan(MaBP)
 )
-
+GO 
 CREATE TABLE KhachHang(
 MaKH VARCHAR(10) PRIMARY KEY NOT NULL,
 TenKH NVARCHAR(40) NOT NULL,
@@ -24,6 +27,7 @@ DiaChi NVARCHAR(50) NOT NULL,
 DienThoai NCHAR(11) NOT NULL,
 GhiChu NVARCHAR(50) NOT NULL
 )
+GO 
 CREATE TABLE NhaCungCap(
 MaNCC VARCHAR(10) PRIMARY KEY NOT NULL,
 TenNCC NVARCHAR(50) NOT NULL,
@@ -31,10 +35,12 @@ DiaChi NVARCHAR(50) NOT NULL,
 DienThoai NCHAR(11) NOT NULL,
 GhiChu NVARCHAR(50) NOT NULL
 )
+GO 
 CREATE TABLE LoaiMatHang(
 MaLoaiMH VARCHAR(20) PRIMARY KEY NOT NULL,
 TenLoaiMH NVARCHAR(40) NOT NULL
 )
+GO 
 CREATE TABLE MatHang(
 MaMH VARCHAR(10) PRIMARY KEY NOT NULL,
 TenMH NVARCHAR(40) NOT NULL,
@@ -44,6 +50,7 @@ DonGiaBan MONEY NOT NULL,
 SoLuongTon TINYINT NOT NULL,
 MaLoaiMH VARCHAR(20) FOREIGN KEY REFERENCES dbo.LoaiMatHang(MaLoaiMH)
 )
+GO 
 CREATE TABLE HoaDonBan(
 SoHDB NCHAR(10) PRIMARY KEY NOT NULL,
 NgayBan DATETIME NOT NULL,
@@ -53,6 +60,7 @@ GhiChu NVARCHAR(50) NOT NULL,
 CONSTRAINT hdb_kh FOREIGN KEY (MaKH) REFERENCES dbo.KhachHang(MaKH),
 CONSTRAINT hdb_nv FOREIGN KEY (MaNV) REFERENCES dbo.NhanVien(MaNV)
 )
+GO 
 CREATE TABLE HoaDonNhap(
 SoHDN NCHAR(10) PRIMARY KEY NOT NULL,
 NgayNhap DATETIME NOT NULL,
@@ -62,6 +70,7 @@ GhiChu NVARCHAR(50) NOT NULL,
 CONSTRAINT hdn_ncc FOREIGN KEY(MaNCC) REFERENCES dbo.NhaCungCap(MaNCC),
 CONSTRAINT hdn_nv FOREIGN KEY(MaNV) REFERENCES dbo.NhanVien(MaNV)
 )
+GO 
 CREATE TABLE CTHDB(
 SoHDB NCHAR(10) NOT NULL,
 MaMH VARCHAR(10) NOT NULL,
@@ -69,6 +78,7 @@ SoLuongBan TINYINT NOT NULL,
 DonGiaBan MONEY NOT NULL
 CONSTRAINT kc1 PRIMARY KEY(SoHDB,MaMH)
 )
+GO 
 CREATE TABLE CTHDN(
 SoHDN NCHAR(10) NOT NULL,
 MaMH VARCHAR(10) NOT NULL,
@@ -77,117 +87,92 @@ DonGiaNhap MONEY NOT NULL
 CONSTRAINT kc2 PRIMARY KEY(SoHDN,MaMH)
 )
 --bộ phận
-INSERT dbo.BoPhan( MaBP, TenBP )VALUES  ( N'01',N'Phòng hành chính')
-INSERT dbo.BoPhan( MaBP, TenBP )VALUES  ( N'02',N'Phòng nhân sự')
-INSERT dbo.BoPhan( MaBP, TenBP )VALUES  ( N'03',N'Phòng kinh doanh')
-INSERT dbo.BoPhan( MaBP, TenBP )VALUES  ( N'04',N'Phòng kế hoạch')
-INSERT dbo.BoPhan( MaBP, TenBP )VALUES  ( N'05',N'Phòng chăm sóc khách hành')
+GO 
+INSERT dbo.BoPhan( MaBP, TenBP )
+VALUES  ( N'01',N'Phòng hành chính'),
+		( N'02',N'Phòng nhân sự'),
+		( N'03',N'Phòng kinh doanh'),
+		( N'04',N'Phòng kế hoạch'),
+		( N'05',N'Phòng chăm sóc khách hành')
 
 --Nhân viên
+GO 
 INSERT dbo.NhanVien( MaNV ,HoNV ,TenNV ,GioiTinh ,NgaySinh ,DiaChi ,Luong ,MaBP)
-VALUES  ( 'NV01' ,N'Huỳnh' , N'Ngọc' ,0, '04/19/1997',N'Nha Trang-Khánh Hòa' ,180 ,N'01')
-INSERT dbo.NhanVien( MaNV ,HoNV ,TenNV ,GioiTinh ,NgaySinh ,DiaChi ,Luong ,MaBP)
-VALUES  ( 'NV02' ,N'Hàng' , N'Bình' ,0, '05/17/1994',N'Nha Trang-Khánh Hòa' ,190 ,N'02')
-INSERT dbo.NhanVien( MaNV ,HoNV ,TenNV ,GioiTinh ,NgaySinh ,DiaChi ,Luong ,MaBP)
-VALUES  ( 'NV03' ,N'Lê' , N'A' ,0, '04/10/1990',N'Vạn Ninh-Khánh Hòa' ,170 ,N'03')
-INSERT dbo.NhanVien( MaNV ,HoNV ,TenNV ,GioiTinh ,NgaySinh ,DiaChi ,Luong ,MaBP)
-VALUES  ( 'NV04' ,N'Trần' , N'B' ,0, '03/11/1987',N'Ninh Hòa-Khánh Hòa' ,160 ,N'04')
-INSERT dbo.NhanVien( MaNV ,HoNV ,TenNV ,GioiTinh ,NgaySinh ,DiaChi ,Luong ,MaBP)
-VALUES  ( 'NV05' ,N'Nguyễn' , N'C' ,0, '02/03/1968',N'Cam Ranh-Khánh Hòa' ,150 ,N'05')
+VALUES  ( 'NV01' ,N'Huỳnh' , N'Ngọc' ,0, '04/19/1997',N'Nha Trang-Khánh Hòa' ,180 ,N'01'),
+		( 'NV02' ,N'Hàng' , N'Bình' ,0, '05/17/1994',N'Nha Trang-Khánh Hòa' ,190 ,N'02'),
+		( 'NV03' ,N'Lê' , N'A' ,0, '04/10/1990',N'Vạn Ninh-Khánh Hòa' ,170 ,N'03'),
+		( 'NV04' ,N'Trần' , N'B' ,0, '03/11/1987',N'Ninh Hòa-Khánh Hòa' ,160 ,N'04'),
+		( 'NV05' ,N'Nguyễn' , N'C' ,0, '02/03/1968',N'Cam Ranh-Khánh Hòa' ,150 ,N'05')
 
  --khách hàng
+ GO 
  INSERT dbo.KhachHang( MaKH ,TenKH ,DiaChi ,DienThoai ,GhiChu )
- VALUES  ( 'KH01' ,N'Trang' ,N'Phương Sài-Nha Trang' ,N'0128384960' ,N'Ko có gì')
- INSERT dbo.KhachHang( MaKH ,TenKH ,DiaChi ,DienThoai ,GhiChu )
- VALUES  ( 'KH02' ,N'Trân' ,N'Lương Định Của-Nha Trang' ,N'09462339' ,N'Thiếu hàng')
- INSERT dbo.KhachHang( MaKH ,TenKH ,DiaChi ,DienThoai ,GhiChu )
- VALUES  ( 'KH03' ,N'Trinh' ,N'Trần Nhật Duật-Nha Trang' ,N'5555d9633' ,N'Khách VIP')
- INSERT dbo.KhachHang( MaKH ,TenKH ,DiaChi ,DienThoai ,GhiChu )
- VALUES  ( 'KH04' ,N'Trà' ,N'Trần Phú-Nha Trang' ,N'098746313' ,N'Khách lẻ')
- INSERT dbo.KhachHang( MaKH ,TenKH ,DiaChi ,DienThoai ,GhiChu )
- VALUES  ( 'KH05' ,N'Trâm' ,N'Lê Thánh Tôn-Nha Trang' ,N'997123366' ,N'Khách sỉ')
+ VALUES  ( 'KH01' ,N'Trang' ,N'Phương Sài-Nha Trang' ,N'0128384960' ,N'Ko có gì'),
+		( 'KH02' ,N'Trân' ,N'Lương Định Của-Nha Trang' ,N'09462339' ,N'Thiếu hàng'),
+		( 'KH03' ,N'Trinh' ,N'Trần Nhật Duật-Nha Trang' ,N'5555d9633' ,N'Khách VIP'),
+		( 'KH04' ,N'Trà' ,N'Trần Phú-Nha Trang' ,N'098746313' ,N'Khách lẻ'),
+		( 'KH05' ,N'Trâm' ,N'Lê Thánh Tôn-Nha Trang' ,N'997123366' ,N'Khách sỉ')
 
  ----- Nhà cung cấp--------------
+ GO 
  INSERT dbo.NhaCungCap ( MaNCC ,TenNCC , DiaChi ,DienThoai , GhiChu)
- VALUES  ( 'CC01' ,N'Vinamilk' , N'Q2-TP.Hồ Chí Minh' ,N'026645412' ,N'Vận chuyển nhanh')
-  INSERT dbo.NhaCungCap ( MaNCC ,TenNCC , DiaChi ,DienThoai , GhiChu)
- VALUES  ( 'CC02' ,N'Dutch lady' , N'Q10-TP.Hồ Chí Minh' ,N'09567392' ,N'Vận chuyển thường')
-  INSERT dbo.NhaCungCap ( MaNCC ,TenNCC , DiaChi ,DienThoai , GhiChu)
- VALUES  ( 'CC03' ,N'Ông Thọ' , N'Q8-TP.Hồ Chí Minh' ,N'008272475' ,N'Số lượng lớn')
-  INSERT dbo.NhaCungCap ( MaNCC ,TenNCC , DiaChi ,DienThoai , GhiChu)
- VALUES  ( 'CC04' ,'Yomost' , N'Q7-TP.Hồ Chí Minh' ,N'03958721' ,N'2 thùng')
-  INSERT dbo.NhaCungCap ( MaNCC ,TenNCC , DiaChi ,DienThoai , GhiChu)
- VALUES  ( 'CC05' ,N'Firsti' , N'Q5-TP.Hồ Chí Minh' ,N'028475789' ,N'1 lô')
+ VALUES  ( 'CC01' ,N'Vinamilk' , N'Q2-TP.Hồ Chí Minh' ,N'026645412' ,N'Vận chuyển nhanh'),
+		 ( 'CC02' ,N'Dutch lady' , N'Q10-TP.Hồ Chí Minh' ,N'09567392' ,N'Vận chuyển thường'),
+		 ( 'CC03' ,N'Ông Thọ' , N'Q8-TP.Hồ Chí Minh' ,N'008272475' ,N'Số lượng lớn'),
+		 ('CC04' ,'Yomost' , N'Q7-TP.Hồ Chí Minh' ,N'03958721' ,N'2 thùng'),
+		 ( 'CC05' ,N'Firsti' , N'Q5-TP.Hồ Chí Minh' ,N'028475789' ,N'1 lô')
 
  -------- Loại mặt hàng-----------------
+ GO 
  INSERT dbo.LoaiMatHang( MaLoaiMH, TenLoaiMH )
- VALUES  ( 'MH01',N'Sữa tươi')
- INSERT dbo.LoaiMatHang( MaLoaiMH, TenLoaiMH )
- VALUES  ( 'MH02',N'Sữa đặc')
- INSERT dbo.LoaiMatHang( MaLoaiMH, TenLoaiMH )
- VALUES  ( 'MH03',N'Sữa chua')
- INSERT dbo.LoaiMatHang( MaLoaiMH, TenLoaiMH )
- VALUES  ( 'MH04',N'Sữa bò')
- INSERT dbo.LoaiMatHang( MaLoaiMH, TenLoaiMH )
- VALUES  ( 'MH05',N'Sữa tiệt trùng')
+ VALUES  ( 'MH01',N'Sữa tươi'),
+		 ( 'MH02',N'Sữa đặc'),
+		 ( 'MH03',N'Sữa chua'),
+		 ( 'MH04',N'Sữa bò'),
+		 ( 'MH05',N'Sữa tiệt trùng')
 
  ---------Mặt hàng---------------------
+ GO 
  INSERT dbo.MatHang( MaMH ,TenMH ,DVT ,DonGiaNhap ,DonGiaBan ,SoLuongTon ,MaLoaiMH)
- VALUES  ( 'H1' , N'sữa dâu' , N'hộp' ,5000 ,6000,2 ,'MH01')
-  INSERT dbo.MatHang( MaMH ,TenMH ,DVT ,DonGiaNhap ,DonGiaBan ,SoLuongTon ,MaLoaiMH)
- VALUES  ( 'H2' , N'thạch nho' , N'viên' ,3000 ,5000,0 ,'MH02')
-  INSERT dbo.MatHang( MaMH ,TenMH ,DVT ,DonGiaNhap ,DonGiaBan ,SoLuongTon ,MaLoaiMH)
- VALUES  ( 'H3' , N'sữa chua nha đam' , N'hủ' ,6000 ,8000,0 ,'MH03')
-  INSERT dbo.MatHang( MaMH ,TenMH ,DVT ,DonGiaNhap ,DonGiaBan ,SoLuongTon ,MaLoaiMH)
- VALUES  ( 'H4' , N'sữa Mộc Châu' , N'hộp' ,5000 ,7000,1 ,'MH04')
-  INSERT dbo.MatHang( MaMH ,TenMH ,DVT ,DonGiaNhap ,DonGiaBan ,SoLuongTon ,MaLoaiMH)
- VALUES  ( 'H5' , N'sữa socola' , N'hộp' ,6000 ,9000,2 ,'MH05')
+ VALUES  ( 'H1' , N'sữa dâu' , N'hộp' ,5000 ,6000,2 ,'MH01'),
+		 ( 'H2' , N'thạch nho' , N'viên' ,3000 ,5000,0 ,'MH02'),
+		 ( 'H3' , N'sữa chua nha đam' , N'hủ' ,6000 ,8000,0 ,'MH03'),
+		 ( 'H4' , N'sữa Mộc Châu' , N'hộp' ,5000 ,7000,1 ,'MH04'),
+		 ( 'H5' , N'sữa socola' , N'hộp' ,6000 ,9000,2 ,'MH05')
 
  ---------------Hóa đơn bán-----------
+ GO 
  INSERT dbo.HoaDonBan( SoHDB, NgayBan, MaKH, MaNV, GhiChu )
- VALUES  ( N'HDB01','02/03/2017','KH01','NV02', N'Buổi sáng')
- INSERT dbo.HoaDonBan( SoHDB, NgayBan, MaKH, MaNV, GhiChu )
- VALUES  ( N'HDB02','05/03/2017','KH04','NV01', N'Buổi sáng')
- INSERT dbo.HoaDonBan( SoHDB, NgayBan, MaKH, MaNV, GhiChu )
- VALUES  ( N'HDB03','12/12/2017','KH03','NV04', N'Buổi sáng')
- INSERT dbo.HoaDonBan( SoHDB, NgayBan, MaKH, MaNV, GhiChu )
- VALUES  ( N'HDB04','10/03/2017','KH05','NV05', N'Buổi chiều')
- INSERT dbo.HoaDonBan( SoHDB, NgayBan, MaKH, MaNV, GhiChu )
- VALUES  ( N'HDB05','04/11/2017','KH02','NV03', N'Buổi chiều')
-
+ VALUES		( N'HDB01','02/03/2017','KH01','NV02', N'Buổi sáng'),
+			( N'HDB02','05/03/2017','KH04','NV01', N'Buổi sáng'),
+			( N'HDB03','12/12/2017','KH03','NV04', N'Buổi sáng'),
+			( N'HDB04','10/03/2017','KH05','NV05', N'Buổi chiều'),
+			( N'HDB05','04/11/2017','KH02','NV03', N'Buổi chiều')
+	
  -------------- Hóa đơn nhập---------------
+ GO 
  INSERT dbo.HoaDonNhap( SoHDN, NgayNhap, MaNCC, MaNV, GhiChu )
- VALUES  ( N'HDN01','02/01/2017','CC02','NV01',N'Nhập chiều')
-  INSERT dbo.HoaDonNhap( SoHDN, NgayNhap, MaNCC, MaNV, GhiChu )
- VALUES  ( N'HDN02','04/11/2017','CC05','NV05',N'Nhập chiều')
-  INSERT dbo.HoaDonNhap( SoHDN, NgayNhap, MaNCC, MaNV, GhiChu )
- VALUES  ( N'HDN03','11/11/2017','CC04','NV03',N'Nhập sáng')
-  INSERT dbo.HoaDonNhap( SoHDN, NgayNhap, MaNCC, MaNV, GhiChu )
- VALUES  ( N'HDN04','09/01/2017','CC01','NV02',N'Nhập sáng')
-  INSERT dbo.HoaDonNhap( SoHDN, NgayNhap, MaNCC, MaNV, GhiChu )
- VALUES  ( N'HDN05','02/10/2017','CC03','NV04',N'Nhập chiều')
+ VALUES ( N'HDN01','02/01/2017','CC02','NV01',N'Nhập chiều'),
+		( N'HDN02','04/11/2017','CC05','NV05',N'Nhập chiều'),
+		( N'HDN03','11/11/2017','CC04','NV03',N'Nhập sáng'),
+		( N'HDN04','09/01/2017','CC01','NV02',N'Nhập sáng'),
+		( N'HDN05','02/10/2017','CC03','NV04',N'Nhập chiều')
  -------------- CTHDB---------------------
+ GO 
  INSERT dbo.CTHDB( SoHDB, MaMH, SoLuongBan, DonGiaBan )
- VALUES  ( N'SHD1','H2',10,5000)
-  INSERT dbo.CTHDB( SoHDB, MaMH, SoLuongBan, DonGiaBan )
- VALUES  ( N'SHD2','H1',20,6000)
-  INSERT dbo.CTHDB( SoHDB, MaMH, SoLuongBan, DonGiaBan )
- VALUES  ( N'SHD3','H5',5,9000)
-  INSERT dbo.CTHDB( SoHDB, MaMH, SoLuongBan, DonGiaBan )
- VALUES  ( N'SHD4','H3',18,8000)
-  INSERT dbo.CTHDB( SoHDB, MaMH, SoLuongBan, DonGiaBan )
- VALUES  ( N'SHD5','H4',19,7000)
+ VALUES		( N'SHD1','H2',10,5000),
+			( N'SHD2','H1',20,6000),
+			( N'SHD3','H5',5,9000),
+			( N'SHD4','H3',18,8000),
+			( N'SHD5','H4',19,7000)
  ----------------CTHDN---------------------
+ GO 
  INSERT dbo.CTHDN( SoHDN ,MaMH ,SoLuongNhap ,DonGiaNhap)
- VALUES  ( N'SHDN1' ,'H5' ,22,6000)
- INSERT dbo.CTHDN( SoHDN ,MaMH ,SoLuongNhap ,DonGiaNhap)
- VALUES  ( N'SHDN2' ,'H3' ,25,6000)
- INSERT dbo.CTHDN( SoHDN ,MaMH ,SoLuongNhap ,DonGiaNhap)
- VALUES  ( N'SHDN3' ,'H1' ,30,5000)
- INSERT dbo.CTHDN( SoHDN ,MaMH ,SoLuongNhap ,DonGiaNhap)
- VALUES  ( N'SHDN4' ,'H4' ,50,5000)
- INSERT dbo.CTHDN( SoHDN ,MaMH ,SoLuongNhap ,DonGiaNhap)
- VALUES  ( N'SHDN5' ,'H2' ,100,3000)
+ VALUES  ( N'SHDN1' ,'H5' ,22,6000),
+		 ( N'SHDN2' ,'H3' ,25,6000),
+		 ( N'SHDN3' ,'H1' ,30,5000),
+		 ( N'SHDN4' ,'H4' ,50,5000),
+		 ( N'SHDN5' ,'H2' ,100,3000)
 
  ---- **HIỂN THỊ DANH SÁCH CÁC DÒNG DỮ LIỆU--------
 ----- Bộ phận-----

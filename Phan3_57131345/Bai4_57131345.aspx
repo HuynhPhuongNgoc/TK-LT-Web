@@ -30,7 +30,7 @@
         <asp:Button ID="btnFor" runat="server" style="margin-left: 55px" Text="For" Width="76px" OnClick="btnFor_Click" />
         <br />
         <br />
-        <asp:Label ID="Label3" runat="server" Text="Kết quả tính tổng số nguyên từ 1 đến n; "></asp:Label>
+        <asp:Label ID="Label3" runat="server" Text="Kết quả tính tổng số nguyên từ 1 đến n:"></asp:Label>
         <asp:TextBox ID="txtKQ" runat="server" style="margin-left: 45px" Width="146px" ReadOnly="True"></asp:TextBox>
     
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -17,10 +17,12 @@
 &nbsp;
         <asp:TextBox ID="txtN" runat="server" Width="171px"></asp:TextBox>
         <br />
+        <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnHienThi" runat="server" style="margin-left: 0px" Text="Hiển thị" Width="95px" OnClick="btnHienThi_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnLamLai" runat="server" Text="Làm lại" Width="93px" OnClick="btnLamLai_Click" />
+        <br />
         <br />
         <asp:Label ID="Label3" runat="server" Text="Kết quả: "></asp:Label>
 &nbsp;

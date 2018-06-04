@@ -113,9 +113,11 @@ public partial class Bai2_57131345 : System.Web.UI.Page
 
     protected void btnXoa_Click(object sender, EventArgs e)
     {
+        
         XoaSach(txtms.Text);
         g1.DataSource = SachDS();
         g1.DataBind();
+        lbltb.Text = "Xóa thành công";
     }
 
 
