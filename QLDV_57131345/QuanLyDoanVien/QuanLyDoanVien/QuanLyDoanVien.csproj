@@ -60,6 +60,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\DBConnect.cs" />
+    <Compile Include="GUI\ChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ChucVu.Designer.cs">
+      <DependentUpon>ChucVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmDoanPhi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +111,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\ChucVu.resx">
+      <DependentUpon>ChucVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmDoanPhi.resx">
       <DependentUpon>frmDoanPhi.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +221,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\banner-news1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20180125-ha-noi-doan-vien-chao-co-hat-quoc-ca-cung-u23-viet-nam-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ngay-hoi_edcz.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doan-TNCSHCM-Quang-Ngai.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dtn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\73585fe55cba3a5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bopermission_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-protect-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-protect-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-protect-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-staff-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_23196.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

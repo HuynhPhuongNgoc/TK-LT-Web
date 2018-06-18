@@ -176,25 +176,26 @@ CREATE PROC DoanVienTN_Sua
 AS
 BEGIN
 	UPDATE dbo.DoanVienTN SET HoTenDV=@HoTenDV,NgaySinh=@NgaySinh,GioiTinh=@GioiTinh,QueQuan=@QueQuan,Email=@Email,SDT=@SDT,DanToc=@DanToc,TonGiao=@TonGiao,NgayVaoDoan=@NgayVaoDoan,ChooHienNay=@ChooHienNay
+	WHERE MaDV=@MaDV
 END
 GO
 CREATE PROC HoatDongPT_DS
 AS
 BEGIN
-	SELECT MaHDPT, HoTenDV, NgayBatDau, NgayKetThuc ,NoiDungHD,DiaDiem FROM dbo.DoanVienTN JOIN dbo.HoatDongPT ON HoatDongPT.MaDV = DoanVienTN.MaDV
+	SELECT MaHDPT, NgayBatDau, NgayKetThuc ,NoiDungHD,DiaDiem,MaDV FROM dbo.HoatDongPT
 END
 GO
 CREATE PROC HoatDongPT_Them
 @MaHDPT VARCHAR(10),
-@HoTenDV NVARCHAR(50),
+--@HoTenDV NVARCHAR(50),
 @NgayBatDau DATE,
 @NgayKetThuc DATE,
 @NoiDungHD NVARCHAR(100),
-@DiaDiem NVARCHAR(100)
---@MaDV VARCHAR(10)
+@DiaDiem NVARCHAR(100),
+@MaDV VARCHAR(10)
 AS
 BEGIN 
-	INSERT INTO dbo.HoatDongPT VALUES(@MaHDPT,@HoTenDV,@NgayBatDau,@NgayKetThuc,@NoiDungHD,@DiaDiem )
+	INSERT INTO dbo.HoatDongPT VALUES(@MaHDPT,@NgayBatDau,@NgayKetThuc,@NoiDungHD,@DiaDiem,@MaDV )
 END 
 GO
 CREATE PROC HoatDongPT_Xoa
@@ -357,3 +358,40 @@ BEGIN
 	UPDATE dbo.ChucVu SET TenChucVu=@TenChucVu,NgayNhamChuc=@NgayNhamChuc,NgayHetNhiemKy=@NgayHetNhiemKy
 	WHERE MaChucVu=@MaChucVu
 END 
+GO
+CREATE PROC TinTuc_DS
+AS 
+	BEGIN
+	SELECT*FROM dbo.TinTuc
+END
+GO
+CREATE PROC TinTuc_Them
+@MaTinTuc VARCHAR(10) ,
+@TenTinTuc NVARCHAR(100),
+@NoiDungTT NVARCHAR(MAX),
+@ThoiGianDang DATETIME ,
+@NguoiDang NVARCHAR(50)
+AS
+BEGIN
+	INSERT INTO dbo.TinTuc VALUES(@MaTinTuc,@TenTinTuc,@NoiDungTT,@ThoiGianDang,@NguoiDang)
+END
+GO
+CREATE PROC TinTuc_Xoa
+@MaTinTuc VARCHAR(10) 
+AS
+BEGIN
+DELETE FROM dbo.TinTuc WHERE MaTinTuc=@MaTinTuc
+END
+GO
+CREATE PROC TinTuc_Sua
+@MaTinTuc VARCHAR(10) ,
+@TenTinTuc NVARCHAR(100),
+@NoiDungTT NVARCHAR(MAX),
+@ThoiGianDang DATETIME ,
+@NguoiDang NVARCHAR(50)
+AS
+BEGIN
+	UPDATE dbo.TinTuc SET TenTinTuc=@TenTinTuc,NoiDungTT=@NoiDungTT,ThoiGianDang=@ThoiGianDang,NguoiDang=@NguoiDang
+	WHERE MaTinTuc=@MaTinTuc
+END
+

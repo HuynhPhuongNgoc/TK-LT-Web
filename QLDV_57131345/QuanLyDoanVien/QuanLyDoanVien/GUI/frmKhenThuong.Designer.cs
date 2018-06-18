@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbltb = new System.Windows.Forms.Label();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -50,17 +51,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("News706 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(430, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 22);
+            this.label1.Size = new System.Drawing.Size(170, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "KHEN THƯỞNG";
             // 
             // groupBox1
             // 
             this.groupBox1.BackgroundImage = global::QuanLyDoanVien.Properties.Resources._54797_n_3657_1455786880;
+            this.groupBox1.Controls.Add(this.lbltb);
             this.groupBox1.Controls.Add(this.btnQuayLai);
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.btnXoa);
@@ -74,59 +76,74 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(21, 51);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(975, 359);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // lbltb
+            // 
+            this.lbltb.AutoSize = true;
+            this.lbltb.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltb.Location = new System.Drawing.Point(26, 306);
+            this.lbltb.Name = "lbltb";
+            this.lbltb.Size = new System.Drawing.Size(36, 22);
+            this.lbltb.TabIndex = 4;
+            this.lbltb.Text = "TB";
+            // 
             // btnQuayLai
             // 
             this.btnQuayLai.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnQuayLai.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuayLai.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuayLai.ForeColor = System.Drawing.Color.Maroon;
             this.btnQuayLai.Location = new System.Drawing.Point(386, 257);
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(83, 32);
+            this.btnQuayLai.Size = new System.Drawing.Size(124, 32);
             this.btnQuayLai.TabIndex = 3;
-            this.btnQuayLai.Text = "Quay Lại";
+            this.btnQuayLai.Text = "QUAY LẠI";
             this.btnQuayLai.UseVisualStyleBackColor = false;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnSua.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Maroon;
             this.btnSua.Location = new System.Drawing.Point(272, 257);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(79, 32);
             this.btnSua.TabIndex = 3;
-            this.btnSua.Text = "Sửa";
+            this.btnSua.Text = "SỬA";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnXoa.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Maroon;
             this.btnXoa.Location = new System.Drawing.Point(145, 257);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(87, 32);
             this.btnXoa.TabIndex = 3;
-            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Text = "XÓA";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnThem.Font = new System.Drawing.Font("Perpetua Titling MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.Maroon;
             this.btnThem.Location = new System.Drawing.Point(26, 257);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(86, 32);
             this.btnThem.TabIndex = 3;
-            this.btnThem.Text = "Thêm";
+            this.btnThem.Text = "THÊM";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // datagridKhenThuong
             // 
@@ -171,10 +188,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.LightCoral;
-            this.label5.Font = new System.Drawing.Font("NewsGoth BT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(23, 206);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 16);
+            this.label5.Size = new System.Drawing.Size(101, 17);
             this.label5.TabIndex = 0;
             this.label5.Text = "Mã Đoàn Viên";
             // 
@@ -182,10 +199,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.LightCoral;
-            this.label4.Font = new System.Drawing.Font("NewsGoth BT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(23, 154);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 16);
+            this.label4.Size = new System.Drawing.Size(154, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Nội dung khen thưởng";
             // 
@@ -193,10 +210,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.LightCoral;
-            this.label3.Font = new System.Drawing.Font("NewsGoth BT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(23, 93);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 16);
+            this.label3.Size = new System.Drawing.Size(128, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Ngày khen thưởng";
             // 
@@ -204,10 +221,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.LightCoral;
-            this.label2.Font = new System.Drawing.Font("NewsGoth BT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(23, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 16);
+            this.label2.Size = new System.Drawing.Size(117, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã khen thưởng";
             // 
@@ -215,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 396);
+            this.ClientSize = new System.Drawing.Size(1004, 396);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmKT";
@@ -245,5 +262,6 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Label lbltb;
     }
 }

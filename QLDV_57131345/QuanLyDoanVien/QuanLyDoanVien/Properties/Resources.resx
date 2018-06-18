@@ -118,70 +118,118 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Tai tao rung ngap man xa Van Tho.jpg (16-8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tai tao rung ngap man xa Van Tho.jpg (16-8).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tải xuống (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tải xuống (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="images1659703_bvl_a__14_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images1659703_bvl_a__14_.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="huyhieudoanchinhthuc_ztgm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\huyhieudoanchinhthuc_ztgm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SinhVienIT.NET---3586967" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SinhVienIT.NET---3586967.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="huyhieudoanchinhthuc_ztgm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\huyhieudoanchinhthuc_ztgm1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="xa lang son 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xa lang son 1.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="images13" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cay" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cay.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hinh-anh-pikachu-de-thuong-kute-nhat-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hinh-anh-pikachu-de-thuong-kute-nhat-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="69e0dc24c110fd880b7dcf9880eb2b26" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\69e0dc24c110fd880b7dcf9880eb2b26.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="images13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AF7C4049B5E165A19FF2ECEEDC4D130D" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AF7C4049B5E165A19FF2ECEEDC4D130D.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dtn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="doan-thanh-nien-trong-rung-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\doan-thanh-nien-trong-rung-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="160737DSC_1887" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\160737DSC_1887.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="banner-news" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\banner-news.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="images976766_image003" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images976766_image003.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="54797-n-3657-1455786880" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\54797-n-3657-1455786880.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tai tao rung ngap man xa Van Tho.jpg (16-8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tai tao rung ngap man xa Van Tho.jpg (16-8).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="huyhieudoanchinhthuc_ztgm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\huyhieudoanchinhthuc_ztgm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nghi-luan-xa-hoi-ve-phong-trao-thanh-nien-tinh-nguyen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nghi-luan-xa-hoi-ve-phong-trao-thanh-nien-tinh-nguyen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tải xuống" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tải xuống.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-protect-128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-protect-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cay.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-protect-64 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-protect-64 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AF7C4049B5E165A19FF2ECEEDC4D130D" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AF7C4049B5E165A19FF2ECEEDC4D130D.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xa lang son 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xa lang son 1.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banner-news" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banner-news.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="73585fe55cba3a5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\73585fe55cba3a5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ngay-hoi_edcz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ngay-hoi_edcz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="113" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\113.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="160737DSC_1887" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\160737DSC_1887.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hinh-anh-pikachu-de-thuong-kute-nhat-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hinh-anh-pikachu-de-thuong-kute-nhat-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="20180125-ha-noi-doan-vien-chao-co-hat-quoc-ca-cung-u23-viet-nam-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20180125-ha-noi-doan-vien-chao-co-hat-quoc-ca-cung-u23-viet-nam-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="54797-n-3657-1455786880" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\54797-n-3657-1455786880.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tải xuống (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tải xuống (1)1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="huyhieudoanchinhthuc_ztgm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\huyhieudoanchinhthuc_ztgm1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-protect-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-protect-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bopermission_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bopermission_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images976766_image003" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images976766_image003.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-save-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-save-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="images826638_IMG_0540__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images826638_IMG_0540__2_.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-staff-filled-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-staff-filled-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="doan-thanh-nien-trong-rung-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doan-thanh-nien-trong-rung-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Doan-TNCSHCM-Quang-Ngai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Doan-TNCSHCM-Quang-Ngai.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SinhVienIT.NET---3586967" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SinhVienIT.NET---3586967.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="banner-news1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\banner-news1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_23196" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1_23196.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
