@@ -60,12 +60,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLL.cs" />
+    <Compile Include="BUS\BUS.cs" />
     <Compile Include="DAL\DBConnect.cs" />
+    <Compile Include="DTO\DTO.cs" />
+    <Compile Include="GUI\ChiDoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ChiDoan.Designer.cs">
+      <DependentUpon>ChiDoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ChucVu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\ChucVu.Designer.cs">
       <DependentUpon>ChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmDoanPhi.cs">
       <SubType>Form</SubType>
@@ -91,6 +106,18 @@
     <Compile Include="GUI\frmKyLuat.Designer.cs">
       <DependentUpon>frmKyLuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLoad.Designer.cs">
+      <DependentUpon>frmLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,10 +136,22 @@
     <Compile Include="GUI\frmTTDoanVien.Designer.cs">
       <DependentUpon>frmTTDoanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\TimKiemDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TimKiemDV.Designer.cs">
+      <DependentUpon>TimKiemDV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\ChiDoan.resx">
+      <DependentUpon>ChiDoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ChucVu.resx">
       <DependentUpon>ChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmDoanPhi.resx">
       <DependentUpon>frmDoanPhi.cs</DependentUpon>
@@ -126,6 +165,12 @@
     <EmbeddedResource Include="GUI\frmKyLuat.resx">
       <DependentUpon>frmKyLuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLoad.resx">
+      <DependentUpon>frmLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmTTDoanVien.resx">
       <DependentUpon>frmTTDoanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TimKiemDV.resx">
+      <DependentUpon>TimKiemDV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -269,6 +317,213 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1_23196.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmark_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_add_101236.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus__Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Plus__Orange_34237.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-512 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Plus__Orange_342371.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sed-07-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sed-07-512 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\519691-199_CircledPlus-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-list-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder-Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-bookmark-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-bookmark-add-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-gnote-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-software-update-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-system-reboot-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manager-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manager-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\App-network-connection-manager-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SEO-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reseller-account-template-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reseller-account-template-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-driver-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-driver-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-file-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-drive-3-12-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floppy-Drive-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10207-man-student-light-skin-tone-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chair-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\community-users-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coins-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prisoner-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tv-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Newspaper-Feed-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-bookmark-add-icon %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circle-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circle-add-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-bookmark-add-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-system-reboot-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign-Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green-cross-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-edit-redo-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-alarm-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\co-doan-huy-hieu-doan-doan-ca.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jgjjhjh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Balance-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seamless-pattern-white-silhouettes-roses-black-leaves-background-32995600.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-1487545__340.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\huyhieudoanchinhthuc_ztgm2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_231961.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_231962.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chibi3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconlicious-Misc-Settings.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Treetog-Junior-Box-config.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\App-help-index-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-key-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

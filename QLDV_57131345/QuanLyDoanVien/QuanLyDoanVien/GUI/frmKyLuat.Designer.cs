@@ -52,7 +52,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(410, 13);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(437, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 24);
             this.label1.TabIndex = 1;
@@ -99,11 +100,14 @@
             // 
             this.btnQuayLai.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnQuayLai.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuayLai.Location = new System.Drawing.Point(328, 279);
+            this.btnQuayLai.Image = global::QuanLyDoanVien.Properties.Resources.Back_icon;
+            this.btnQuayLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuayLai.Location = new System.Drawing.Point(367, 279);
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(75, 32);
+            this.btnQuayLai.Size = new System.Drawing.Size(100, 32);
             this.btnQuayLai.TabIndex = 4;
             this.btnQuayLai.Text = "QUAY LẠI";
+            this.btnQuayLai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnQuayLai.UseVisualStyleBackColor = false;
             this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
@@ -111,9 +115,11 @@
             // 
             this.btnSua.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(220, 279);
+            this.btnSua.Image = global::QuanLyDoanVien.Properties.Resources.pencil_icon__1_;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(247, 279);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 32);
+            this.btnSua.Size = new System.Drawing.Size(88, 32);
             this.btnSua.TabIndex = 4;
             this.btnSua.Text = "SỬA";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -123,9 +129,11 @@
             // 
             this.btnXoa.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(109, 279);
+            this.btnXoa.Image = global::QuanLyDoanVien.Properties.Resources.cancel_icon;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(121, 279);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 32);
+            this.btnXoa.Size = new System.Drawing.Size(93, 32);
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "XÓA";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -135,9 +143,11 @@
             // 
             this.btnThem.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Image = global::QuanLyDoanVien.Properties.Resources.add_alarm_icon;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.Location = new System.Drawing.Point(0, 279);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(80, 32);
+            this.btnThem.Size = new System.Drawing.Size(92, 32);
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "THÊM";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -231,7 +241,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCyan;
+            this.BackColor = System.Drawing.Color.BurlyWood;
             this.ClientSize = new System.Drawing.Size(1001, 410);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);

@@ -18,9 +18,10 @@ NguoiDang NVARCHAR(50) NOT NULL
 GO 
 CREATE TABLE DoanVienTN(
 MaDV VARCHAR(10) PRIMARY KEY NOT NULL,
-HoTenDV NVARCHAR(100) NOT NULL,
+HoDV NVARCHAR (50) NOT NULL,
+TenDV NVARCHAR(50) NOT NULL,
 NgaySinh DATE NOT NULL,
-GioiTinh NVARCHAR(10) NOT NULL,
+GioiTinh BIT,
 QueQuan NVARCHAR(100) NOT NULL,
 Email NVARCHAR(50) NOT NULL,
 SDT VARCHAR(15)NOT NULL,
@@ -28,7 +29,7 @@ DanToc NVARCHAR(50)NOT NULL,
 TonGiao NVARCHAR(50) NOT NULL,
 NgayVaoDoan DATE NOT NULL,
 ChooHienNay NVARCHAR(100) NOT NULL,
-HinhAnh NVARCHAR(200) NOT NULL,
+
 MaChiDoan VARCHAR(10) NOT NULL,
 CONSTRAINT dv_cd FOREIGN KEY(MaChiDoan) REFERENCES dbo.ChiDoan(MaChiDoan)
 )
@@ -90,12 +91,13 @@ VALUES  ( 'TT01' ,N'Thanh niên học cảm tình Đoàn' ,N'Hơn 100 sinh viên
 		( 'TT03' ,N'Đoàn viên dọn vệ sinh giảng đường G6' ,N'Ngày 01/04 Hơn 50 Đoàn viên tham gia dọn vệ sinh giảng đường G6' ,'04/01/2018' ,N'Nguyễn C')
 GO 
 INSERT dbo.DoanVienTN
-        ( MaDV ,HoTenDV ,NgaySinh ,GioiTinh ,QueQuan ,Email ,SDT ,DanToc ,TonGiao ,NgayVaoDoan ,ChooHienNay ,HinhAnh ,MaChiDoan)
-VALUES  ( 'DV01' ,N'Nguyễn Minh Triết' ,'09/08/1997' , N'Nam' ,N'Nha Trang' ,N'triet@gmail.com' ,'0123456789' ,N'Kinh' , N'Không' ,'03/26/2015' ,N'Nha Trang' ,N'A1' ,'7TH1'),
-		( 'DV02' ,N'Lê Thị Đào' ,'05/07/1996' , N'Nữ' ,N'Cam Ranh' , N'dao@gmail.com' ,'0987654321' ,N'Khơ me đỏ' , N'Phật giáo' ,'03/26/2014' ,N'Nha Trang' ,N'A2' ,'6HTTT'),
-		( 'DV03' ,N'Đào Bá Lộc' ,'04/06/1995' , N'Nam' ,N'Vạn Ninh' ,N'loc@gmail.com' ,'015314316' ,N'Thái' , N'Thiên Chúa giáo' ,'05/19/2015' ,N'Nha Trang' ,N'A3' ,'8TTQL'),
-		( 'DV04' ,N'Hiền Thục' ,'04/08/1998' , N'Nữ' ,N'Vạn Ninh' ,N'thuc@gmail.com' ,'01234756' ,N'Kinh' , N'Thiên Chúa giáo' ,'05/19/2015' ,N'Nha Trang' ,N'A4' ,'6HTTT'),
-		( 'DV05' ,N'Đàm Vĩnh ' ,'09/06/1997' , N'Nam' ,N'Ninh Hòa' ,N'vinh@gmail.com' ,'0397452' ,N'Kinh' , N'Không' ,'05/19/2015' ,N'Nha Trang' ,N'A5' ,'8TTQL')
+        ( MaDV ,HoDV,TenDV ,NgaySinh ,GioiTinh ,QueQuan ,Email ,SDT ,DanToc ,TonGiao ,NgayVaoDoan ,ChooHienNay  ,MaChiDoan)
+VALUES  ( 'DV01' ,N'Nguyễn',N'Minh Triết' ,'09/08/1997' , 1,N'Nha Trang' ,N'triet@gmail.com' ,'0123456789' ,N'Kinh' , N'Không' ,'03/26/2015' ,N'Nha Trang'  ,'7TH1'),
+		( 'DV02' ,N'Lê' ,N'Thị Đào' ,'05/07/1996' , 0 ,N'Cam Ranh' , N'dao@gmail.com' ,'0987654321' ,N'Khơ me đỏ' , N'Phật giáo' ,'03/26/2014' ,N'Nha Trang'  ,'6HTTT'),
+		( 'DV03' ,N'Đào',N' Bá Lộc' ,'04/06/1995' , 1 ,N'Vạn Ninh' ,N'loc@gmail.com' ,'015314316' ,N'Thái' , N'Thiên Chúa giáo' ,'05/19/2015' ,N'Nha Trang'  ,'8TTQL'),
+		( 'DV04' ,N'Nguyễn',N'Hiền Thục' ,'04/08/1998' , 0 ,N'Vạn Ninh' ,N'thuc@gmail.com' ,'01234756' ,N'Kinh' , N'Thiên Chúa giáo' ,'05/19/2015' ,N'Nha Trang'  ,'6HTTT'),
+		( 'DV05' ,N'Đàm' ,N'Vĩnh Hưng','09/06/1997' , 1 ,N'Ninh Hòa' ,N'vinh@gmail.com' ,'0397452' ,N'Kinh' , N'Không' ,'05/19/2015' ,N'Nha Trang'  ,'8TTQL')
+
 GO
 INSERT dbo.HoatDongPT
         ( MaHDPT ,NgayBatDau ,NgayKetThuc ,NoiDungHD ,DiaDiem ,MaDV)
@@ -125,19 +127,24 @@ INSERT dbo.ChucVu
 VALUES  ( 'CV01' , N'Bí thư' ,'02/03/2016' ,'06/30/2018','DV01'),
 		( 'CV02' , N'Phí bí thư' ,'01/05/2016' ,'06/11/2018','DV02'),
 		( 'CV03' , N'Bí thư' ,'02/03/2016' ,'11/11/2018','DV03')
-ALTER TABLE dbo.DoanVienTN DROP COLUMN HinhAnh
+
 GO
 CREATE PROC DoanVienTN_DS
 AS
 BEGIN
-	SELECT * FROM dbo.DoanVienTN
+	SELECT MaDV,HoDV,TenDV,NgaySinh,
+	(CASE WHEN GioiTinh=1 THEN N'Nam'
+	 WHEN GioiTinh=0 THEN N'Nữ'
+	 END) AS GioiTinh,QueQuan,Email,SDT,DanToc,TonGiao,NgayVaoDoan,ChooHienNay,MaChiDoan
+	 FROM dbo.DoanVienTN
 END 
 GO
 CREATE PROC DoanVienTN_Them
 @MaDV VARCHAR(10),
-@HoTenDV NVARCHAR(100),
+@HoDV NVARCHAR(50),
+@TenDV NVARCHAR(50),
 @NgaySinh DATE,
-@GioiTinh NVARCHAR(10),
+@GioiTinh BIT,
 @QueQuan NVARCHAR(100),
 @Email NVARCHAR(50),
 @SDT VARCHAR(15),
@@ -149,7 +156,7 @@ CREATE PROC DoanVienTN_Them
 @MaChiDoan VARCHAR(10)
 AS
 BEGIN
-	INSERT INTO dbo.DoanVienTN VALUES(@MaDV,@HoTenDV,@NgaySinh,@GioiTinh,@QueQuan,@Email,@SDT,@DanToc,@TonGiao,@NgayVaoDoan,@ChooHienNay,@MaChiDoan)
+	INSERT INTO dbo.DoanVienTN VALUES(@MaDV,@HoDV,@TenDV,@NgaySinh,@GioiTinh,@QueQuan,@Email,@SDT,@DanToc,@TonGiao,@NgayVaoDoan,@ChooHienNay,@MaChiDoan)
 END 
 GO
 CREATE PROC DoanVienTN_Xoa
@@ -161,9 +168,10 @@ END
 GO
 CREATE PROC DoanVienTN_Sua
 @MaDV VARCHAR(10),
-@HoTenDV NVARCHAR(100),
+@HoDV NVARCHAR(50),
+@TenDV NVARCHAR(50),
 @NgaySinh DATE,
-@GioiTinh NVARCHAR(10),
+@GioiTinh BIT,
 @QueQuan NVARCHAR(100),
 @Email NVARCHAR(50),
 @SDT VARCHAR(15),
@@ -175,7 +183,7 @@ CREATE PROC DoanVienTN_Sua
 @MaChiDoan VARCHAR(10)   
 AS
 BEGIN
-	UPDATE dbo.DoanVienTN SET HoTenDV=@HoTenDV,NgaySinh=@NgaySinh,GioiTinh=@GioiTinh,QueQuan=@QueQuan,Email=@Email,SDT=@SDT,DanToc=@DanToc,TonGiao=@TonGiao,NgayVaoDoan=@NgayVaoDoan,ChooHienNay=@ChooHienNay
+	UPDATE dbo.DoanVienTN SET HoDV=@HoDV,TenDV=@TenDV,NgaySinh=@NgaySinh,GioiTinh=@GioiTinh,QueQuan=@QueQuan,Email=@Email,SDT=@SDT,DanToc=@DanToc,TonGiao=@TonGiao,NgayVaoDoan=@NgayVaoDoan,ChooHienNay=@ChooHienNay
 	WHERE MaDV=@MaDV
 END
 GO
@@ -394,4 +402,30 @@ BEGIN
 	UPDATE dbo.TinTuc SET TenTinTuc=@TenTinTuc,NoiDungTT=@NoiDungTT,ThoiGianDang=@ThoiGianDang,NguoiDang=@NguoiDang
 	WHERE MaTinTuc=@MaTinTuc
 END
-
+GO 
+CREATE PROC Tim_DV
+@TenDV NVARCHAR(50),
+@MaChiDoan VARCHAR(10)
+AS
+BEGIN 
+	SELECT*FROM dbo.DoanVienTN WHERE ( @TenDV IS NULL OR TenDV LIKE '%'+@TenDV+'%')
+								AND 	 (@MaChiDoan IS NULL OR MaChiDoan= @MaChiDoan)
+END
+GO
+CREATE TABLE DangNhap(
+TaiKhoan VARCHAR(100),
+MatKhau VARCHAR(100),
+Quyen   VARCHAR(20)
+)
+GO
+INSERT dbo.DangNhap
+        ( TaiKhoan, MatKhau, Quyen )
+VALUES  ( 'admin', -- TaiKhoan - varchar(100)
+          'admin', -- MatKhau - varchar(100)
+          'admin'  -- Quyen - varchar(20)
+          ),
+    ( 'huynhphuongngoc', -- TaiKhoan - varchar(100)
+          '12345678', -- MatKhau - varchar(100)
+          'member'  -- Quyen - varchar(20)
+          )
+GO

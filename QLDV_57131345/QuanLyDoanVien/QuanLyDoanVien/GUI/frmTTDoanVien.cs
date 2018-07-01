@@ -18,17 +18,18 @@ namespace QuanLyDoanVien.GUI
             InitializeComponent();
             datagridTTDoanVien.DataSource = ttdvDAL.DoanVienTN_DS();
             datagridTTDoanVien.Columns[0].HeaderText = "Mã Đoàn Viên";
-            datagridTTDoanVien.Columns[1].HeaderText = "Họ tên Đoàn Viên";
-            datagridTTDoanVien.Columns[2].HeaderText = "Ngày sinh";
-            datagridTTDoanVien.Columns[3].HeaderText = "Giới tính";
-            datagridTTDoanVien.Columns[4].HeaderText = "Quê quán";
-            datagridTTDoanVien.Columns[5].HeaderText = "Email";
-            datagridTTDoanVien.Columns[6].HeaderText = "Số điện thoại";
-            datagridTTDoanVien.Columns[7].HeaderText = "Dân tộc";
-            datagridTTDoanVien.Columns[8].HeaderText = "Tôn giáo";
-            datagridTTDoanVien.Columns[9].HeaderText = "Ngày vào Đoàn";
-            datagridTTDoanVien.Columns[10].HeaderText = "Chỗ ở hiện nay";
-            datagridTTDoanVien.Columns[11].HeaderText = "Mã chi Đoàn";
+            datagridTTDoanVien.Columns[1].HeaderText = "Họ Đoàn Viên";
+            datagridTTDoanVien.Columns[2].HeaderText = "Tên Đoàn Viên";
+            datagridTTDoanVien.Columns[3].HeaderText = "Ngày sinh";
+            datagridTTDoanVien.Columns[4].HeaderText = "Giới tính";
+            datagridTTDoanVien.Columns[5].HeaderText = "Quê quán";
+            datagridTTDoanVien.Columns[6].HeaderText = "Email";
+            datagridTTDoanVien.Columns[7].HeaderText = "Số điện thoại";
+            datagridTTDoanVien.Columns[8].HeaderText = "Dân tộc";
+            datagridTTDoanVien.Columns[9].HeaderText = "Tôn giáo";
+            datagridTTDoanVien.Columns[10].HeaderText = "Ngày vào Đoàn";
+            datagridTTDoanVien.Columns[11].HeaderText = "Chỗ ở hiện nay";
+            datagridTTDoanVien.Columns[12].HeaderText = "Mã chi Đoàn";
         }
 
         private void label14_Click(object sender, EventArgs e)
@@ -38,9 +39,12 @@ namespace QuanLyDoanVien.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            byte GioiTinh= 1;
+            if (rdnnam.Checked == true) GioiTinh = 1;
+            if (rdnnu.Checked == true) GioiTinh = 0;
             try
             {
-                ttdvDAL.themTTDoanVien(txtMDV.Text, txthtDV.Text, txtns.Text, txtgt.Text, txtqq.Text, txtemail.Text, txtsdt.Text, txtdt.Text, txttg.Text, txtnvd.Text, txtcohn.Text, lbltb.Text);
+                ttdvDAL.themTTDoanVien(txtMDV.Text, txthDV.Text, txttDV.Text,txtns.Text,GioiTinh, txtqq.Text, txtemail.Text, txtsdt.Text, txtdt.Text, txttg.Text, txtnvd.Text, txtcohn.Text, lbltb.Text);
                 datagridTTDoanVien.DataSource = ttdvDAL.DoanVienTN_DS();
                 lbltbtt.Text = "Thêm thành công";
             }
@@ -60,9 +64,12 @@ namespace QuanLyDoanVien.GUI
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            byte GioiTinh = 1;
+            if (rdnnam.Checked == true) GioiTinh = 1;
+            if (rdnnu.Checked == true) GioiTinh = 0;
             try
             {
-                ttdvDAL.suaTTDoanVien(txtMDV.Text, txthtDV.Text, txtns.Text, txtgt.Text, txtqq.Text, txtemail.Text, txtsdt.Text, txtdt.Text, txttg.Text, txtnvd.Text, txtcohn.Text, lbltb.Text);
+                ttdvDAL.suaTTDoanVien(txtMDV.Text, txthDV.Text,txttDV.Text, txtns.Text, GioiTinh, txtqq.Text, txtemail.Text, txtsdt.Text, txtdt.Text, txttg.Text, txtnvd.Text, txtcohn.Text, lbltb.Text);
                 datagridTTDoanVien.DataSource = ttdvDAL.DoanVienTN_DS();
                 lbltbtt.Text = "Sửa thành công";
             }
@@ -72,9 +79,10 @@ namespace QuanLyDoanVien.GUI
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
             txtMDV.Text = "";
-            txthtDV.Text = "";
+            txthDV.Text = "";
+            txttDV.Text = "";
             txtns.Text = "";
-            txtgt.Text = "";
+            //txtgt.Text = "";
             txtqq.Text = "";
             txtemail.Text = "";
             txtsdt.Text = "";

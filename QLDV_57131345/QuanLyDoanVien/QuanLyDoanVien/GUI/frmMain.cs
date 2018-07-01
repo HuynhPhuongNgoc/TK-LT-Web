@@ -13,12 +13,21 @@ namespace QuanLyDoanVien
 {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        private string quyen;
+        public string Quyen { get { return quyen; } set { quyen = value; } }
+        
         public frmMain()
         {
             InitializeComponent();
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
         }
+        public frmMain(string quyen)
+        {
+            InitializeComponent();
+            this.quyen = quyen;
+        }
+
         private Form KiemTraTonTai(Type fType)
         {
             foreach (Form f in this.MdiChildren)
@@ -128,6 +137,46 @@ namespace QuanLyDoanVien
             else
             {
                 frmTinTuc f = new frmTinTuc();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            /*string[] lines = new string[2];
+            lines = File.ReadAllLines("CurrentUser.txt");
+            AccountBLL accBLL = new AccountBLL();
+            lblCurrentUser.Text = accBLL.LayTenHT(lines[0], lines[1]);
+            SkinHelper.InitSkinPopupMenu(SkinsLink);*/
+        }
+
+        private void btnTimKiem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmTimKiemDV));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmTimKiemDV f = new frmTimKiemDV();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnChiDoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmChiDoan));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmChiDoan f = new frmChiDoan();
                 f.MdiParent = this;
                 f.Show();
             }
