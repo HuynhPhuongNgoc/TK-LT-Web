@@ -138,6 +138,7 @@ D:\Thuc tap\QLDV_57131345\QuanLyDoanVien\QuanLyDoanVien\bin\Debug\ru\DevExpress.
 D:\Thuc tap\QLDV_57131345\QuanLyDoanVien\QuanLyDoanVien\obj\Debug\QuanLyDoanVien.GUI.frmChucVu.resources
 D:\Thuc tap\QLDV_57131345\QuanLyDoanVien\QuanLyDoanVien\obj\Debug\QuanLyDoanVien.GUI.frmDangNhap.resources
 D:\Thuc tap\QLDV_57131345\QuanLyDoanVien\QuanLyDoanVien\obj\Debug\QuanLyDoanVien.GUI.frmLoad.resources
-D:\Thuc tap\QLDV_57131345\QuanLyDoanVien\QuanLyDoanVien\obj\Debug\QuanLyDoanVien.GUI.frmTimKiemDV.resources
 D:\Thuc tap\QLDV_57131345\QuanLyDoanVien\QuanLyDoanVien\obj\Debug\QuanLyDoanVien.GUI.frmChiDoan.resources
 D:\Thuc tap\QLDV_57131345\QuanLyDoanVien\QuanLyDoanVien\obj\Debug\QuanLyDoanVien.GUI.frmLogin.resources
+D:\Thuc tap\QLDV_57131345\QuanLyDoanVien\QuanLyDoanVien\obj\Debug\QuanLyDoanVien.GUI.frmTimKiemDoanVien.resources
+D:\Thuc tap\QLDV_57131345\QuanLyDoanVien\QuanLyDoanVien\obj\Debug\QuanLyDoanVien.GUI.frmBackupRestore.resources

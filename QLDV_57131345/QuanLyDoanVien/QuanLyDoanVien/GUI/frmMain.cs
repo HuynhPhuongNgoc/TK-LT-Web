@@ -15,7 +15,7 @@ namespace QuanLyDoanVien
     {
         private string quyen;
         public string Quyen { get { return quyen; } set { quyen = value; } }
-        
+
         public frmMain()
         {
             InitializeComponent();
@@ -149,25 +149,10 @@ namespace QuanLyDoanVien
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            /*string[] lines = new string[2];
-            lines = File.ReadAllLines("CurrentUser.txt");
-            AccountBLL accBLL = new AccountBLL();
-            lblCurrentUser.Text = accBLL.LayTenHT(lines[0], lines[1]);
-            SkinHelper.InitSkinPopupMenu(SkinsLink);*/
+            PhanQuyen();
+            //tabForm.TabPages.Clear();
         }
 
-        private void btnTimKiem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form frm = this.KiemTraTonTai(typeof(frmTimKiemDV));
-            if (frm != null)
-                frm.Activate();
-            else
-            {
-                frmTimKiemDV f = new frmTimKiemDV();
-                f.MdiParent = this;
-                f.Show();
-            }
-        }
 
         private void btnChiDoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -181,5 +166,95 @@ namespace QuanLyDoanVien
                 f.Show();
             }
         }
+
+        private void btnDN_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmLogin frm = new frmLogin();
+            frm.ShowDialog();
+        }
+
+        private void btnDX_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+                frmLogin frm = new frmLogin();
+                frm.ShowDialog();
+            }
+        }
+
+        private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnThoat_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Application.Exit();
+        }
+        public void PhanQuyenCNAdmin()
+        {
+            frmLogin frm1 = new frmLogin();
+            frm1.Hide();
+            frmMain fm = new frmMain();
+            ribDN.Visible = false;
+            fm.ShowDialog();
+
+        }
+        public void PhanQuyenCNMember()
+        {
+
+            //if (MessageBox.Show("RẤT TIẾC!TÀI KHOẢN CỦA BẠN KHÔNG PHẢI ADMIN. VUI LÒNG KHÔNG XÂM NHẬP HỆ THỐNG!!", "PROBLEM!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+           // {
+                //this.Close();
+                frmLogin frm = new frmLogin();
+            frm.Hide();
+            frmMain fm = new frmMain();
+            ribDN.Visible = false;
+            ribbonPageQL.Visible = false;
+            ribbonPageTK.Visible = false;
+            ribbonPageTKBC.Visible = false;
+            ribBKRS.Visible = false;
+            fm.ShowDialog();
+           // }
+        }
+        public void PhanQuyen()
+        {
+            if (Quyen == "admin")
+                PhanQuyenCNAdmin();
+            else if (Quyen == "member")
+                PhanQuyenCNMember();
+           
+        }
+
+        private void btnTKDV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmTimKiemDoanVien));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                frmTimKiemDoanVien f = new frmTimKiemDoanVien();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnTinh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://tintuc.tinhdoankhanhhoa.org.vn/");
+        }
+
+        private void btnHelp_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/DoanKhoaCNTT.DHNT/");
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblDate.Text = "Date: " + System.DateTime.Now.ToShortDateString();
+            lblTime.Text = "Time: " + System.DateTime.Now.ToLongTimeString();
+        }
+
     }
 }

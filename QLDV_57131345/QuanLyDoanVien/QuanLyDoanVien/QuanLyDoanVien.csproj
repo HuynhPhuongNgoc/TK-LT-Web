@@ -124,6 +124,18 @@
     <Compile Include="GUI\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmBackupRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmBackupRestore.Designer.cs">
+      <DependentUpon>frmBackupRestore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmTimKiemDoanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTimKiemDoanVien.Designer.cs">
+      <DependentUpon>frmTimKiemDoanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmTinTuc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,12 +147,6 @@
     </Compile>
     <Compile Include="GUI\frmTTDoanVien.Designer.cs">
       <DependentUpon>frmTTDoanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\TimKiemDV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\TimKiemDV.Designer.cs">
-      <DependentUpon>TimKiemDV.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -174,14 +180,17 @@
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmBackupRestore.resx">
+      <DependentUpon>frmBackupRestore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTimKiemDoanVien.resx">
+      <DependentUpon>frmTimKiemDoanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmTinTuc.resx">
       <DependentUpon>frmTinTuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmTTDoanVien.resx">
       <DependentUpon>frmTTDoanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\TimKiemDV.resx">
-      <DependentUpon>TimKiemDV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -524,6 +533,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\open-key-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log-Out-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-window-close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modem-manager-gui-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modem-manager-gui-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\community-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

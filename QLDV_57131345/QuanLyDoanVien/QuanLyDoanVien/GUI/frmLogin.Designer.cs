@@ -37,16 +37,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
-            this.groupBox2.BackgroundImage = global::QuanLyDoanVien.Properties.Resources.open_key_icon;
-            this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.groupBox2.Location = new System.Drawing.Point(33, 12);
+            this.groupBox2.BackgroundImage = global::QuanLyDoanVien.Properties.Resources.login_icon__1_;
+            this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Location = new System.Drawing.Point(40, 81);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(267, 325);
+            this.groupBox2.Size = new System.Drawing.Size(216, 118);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -61,9 +64,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(306, 12);
+            this.groupBox1.Location = new System.Drawing.Point(315, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(548, 342);
+            this.groupBox1.Size = new System.Drawing.Size(539, 325);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -93,17 +96,19 @@
             // 
             // txtmk
             // 
+            this.txtmk.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmk.Location = new System.Drawing.Point(171, 146);
             this.txtmk.Name = "txtmk";
-            this.txtmk.Size = new System.Drawing.Size(173, 21);
+            this.txtmk.Size = new System.Drawing.Size(173, 26);
             this.txtmk.TabIndex = 2;
             this.txtmk.UseSystemPasswordChar = true;
             // 
             // txttk
             // 
+            this.txttk.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttk.Location = new System.Drawing.Point(171, 65);
             this.txttk.Name = "txttk";
-            this.txttk.Size = new System.Drawing.Size(173, 21);
+            this.txttk.Size = new System.Drawing.Size(173, 26);
             this.txttk.TabIndex = 2;
             // 
             // label3
@@ -139,6 +144,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐĂNG NHẬP HỆ THỐNG";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Info;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(28, 77);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(188, 24);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "MỜI ĐĂNG  NHẬP";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,6 +164,8 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmLogin";
             this.Text = "Login ";
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -165,5 +183,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label4;
     }
 }

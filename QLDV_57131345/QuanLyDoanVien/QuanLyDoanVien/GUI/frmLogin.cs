@@ -10,11 +10,13 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using QuanLyDoanVien.BUS;
 using QuanLyDoanVien.DTO;
+using QuanLyDoanVien.GUI;
 namespace QuanLyDoanVien.GUI
 {
     public partial class frmLogin : DevExpress.XtraEditors.XtraForm
     {
         LoginBUS lgbus = new LoginBUS();
+      
         public frmLogin()
         {
             InitializeComponent();
@@ -55,5 +57,6 @@ namespace QuanLyDoanVien.GUI
             if (MessageBox.Show("Bạn muốn thoát ứng dụng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 this.Close();
         }
+      
     }
 }

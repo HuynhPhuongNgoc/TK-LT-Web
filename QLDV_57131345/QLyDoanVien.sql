@@ -404,12 +404,14 @@ BEGIN
 END
 GO 
 CREATE PROC Tim_DV
-@TenDV NVARCHAR(50),
-@MaChiDoan VARCHAR(10)
+--@MaDV VARCHAR(10).
+@TenDV NVARCHAR(50)
+--@MaChiDoan VARCHAR(10)
 AS
 BEGIN 
-	SELECT*FROM dbo.DoanVienTN WHERE ( @TenDV IS NULL OR TenDV LIKE '%'+@TenDV+'%')
-								AND 	 (@MaChiDoan IS NULL OR MaChiDoan= @MaChiDoan)
+	SELECT*FROM dbo.DoanVienTN WHERE --(@MaDV IS NULL OR MaDV= @MaDV )
+								 @TenDV IS NULL OR TenDV LIKE +N'%'+@TenDV+'%'
+							   -- AND  (@MaChiDoan IS NULL OR MaChiDoan= @MaChiDoan)
 END
 GO
 CREATE TABLE DangNhap(
@@ -428,4 +430,4 @@ VALUES  ( 'admin', -- TaiKhoan - varchar(100)
           '12345678', -- MatKhau - varchar(100)
           'member'  -- Quyen - varchar(20)
           )
-GO
+

@@ -263,6 +263,16 @@ namespace QuanLyDoanVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Actions_window_close_icon {
+            get {
+                object obj = ResourceManager.GetObject("Actions-window-close-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_alarm_icon {
             get {
                 object obj = ResourceManager.GetObject("add-alarm-icon", resourceCulture);
@@ -456,6 +466,16 @@ namespace QuanLyDoanVien.Properties {
         internal static System.Drawing.Bitmap Coins_icon {
             get {
                 object obj = ResourceManager.GetObject("Coins-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap community_icon {
+            get {
+                object obj = ResourceManager.GetObject("community-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -773,9 +793,29 @@ namespace QuanLyDoanVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Log_Out_icon {
+            get {
+                object obj = ResourceManager.GetObject("Log-Out-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_icon {
             get {
                 object obj = ResourceManager.GetObject("login-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("login-icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -796,6 +836,26 @@ namespace QuanLyDoanVien.Properties {
         internal static System.Drawing.Bitmap Manager_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("Manager-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap modem_manager_gui_icon {
+            get {
+                object obj = ResourceManager.GetObject("modem-manager-gui-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap modem_manager_gui_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("modem-manager-gui-icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

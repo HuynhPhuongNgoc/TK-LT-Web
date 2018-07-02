@@ -103,4 +103,10 @@ namespace QuanLyDoanVien.DTO
             }
             public Login() { TaiKhoan = ""; MatKhau = ""; Quyen = ""; }
         }
+    public class TTDoanVien
+    {
+        
+
+
+    }
     }

@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="open-key-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open-key-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SinhVienIT.NET---3586967" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SinhVienIT.NET---3586967.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -199,14 +202,17 @@
   <data name="Plus__Orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Plus__Orange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\login-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="co-doan-huy-hieu-doan-doan-ca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\co-doan-huy-hieu-doan-doan-ca.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="modem-manager-gui-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\modem-manager-gui-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="xa lang son 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xa lang son 1.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cross-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cross-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Actions-window-close-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Actions-window-close-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Circle-add-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Circle-add-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -216,9 +222,6 @@
   </data>
   <data name="Newspaper-Feed-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Newspaper-Feed-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1_23196" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1_23196.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Treetog-Junior-Box-config" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Treetog-Junior-Box-config.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,6 +265,9 @@
   <data name="1_231962" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1_231962.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="modem-manager-gui-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\modem-manager-gui-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="floppy-driver-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\floppy-driver-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -280,8 +286,8 @@
   <data name="519691-199_CircledPlus-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\519691-199_CircledPlus-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Back-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Back-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="login-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="App-help-index-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\App-help-index-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -316,6 +322,12 @@
   <data name="images976766_image003" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images976766_image003.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Actions-system-reboot-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Actions-system-reboot-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Back-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Back-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AF7C4049B5E165A19FF2ECEEDC4D130D" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AF7C4049B5E165A19FF2ECEEDC4D130D.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -334,6 +346,9 @@
   <data name="160737DSC_1887" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\160737DSC_1887.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="login-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Folder-Add-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Folder-Add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -349,8 +364,8 @@
   <data name="Tai tao rung ngap man xa Van Tho.jpg (16-8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tai tao rung ngap man xa Van Tho.jpg (16-8).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Actions-system-reboot-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Actions-system-reboot-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pencil-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pencil-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="54797-n-3657-1455786880" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\54797-n-3657-1455786880.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -409,14 +424,17 @@
   <data name="icons8-protect-128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-protect-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Log-Out-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Log-Out-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="73585fe55cba3a5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\73585fe55cba3a5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="floppy-drive-3-12-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\floppy-drive-3-12-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="co-doan-huy-hieu-doan-doan-ca" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\co-doan-huy-hieu-doan-doan-ca.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1_23196" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1_23196.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images13.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -427,8 +445,8 @@
   <data name="green-cross-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\green-cross-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pencil-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pencil-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cross-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cross-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -436,7 +454,7 @@
   <data name="bookmark_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bookmark_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="open-key-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\open-key-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="community-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\community-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
